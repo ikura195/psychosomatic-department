@@ -1,19 +1,19 @@
 <template>
-  <section class="relative bg-gradient-to-br from-blue-50 to-white min-h-[85vh] flex items-center">
+  <section class="relative min-h-[85vh] flex items-center" style="background-color: var(--yc-neutral-gray-0);">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto text-center">
         <!-- 告知帯 -->
-        <div class="bg-blue-600 text-white py-3 px-6 rounded-lg mb-8 inline-block">
+        <div class="py-3 px-6 rounded-lg mb-8 inline-block" style="background-color: var(--yc-semantic-warning-100); color: var(--yc-neutral-gray-800); border: 1px solid var(--yc-semantic-warning-300);">
           <p class="font-semibold">当院は【電話予約のみ】です（Web予約はありません）</p>
         </div>
         
         <!-- メインヘッダー -->
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="color: var(--yc-neutral-gray-900);">
           {{ site.clinicName }}
         </h1>
         
         <!-- サブタイトル -->
-        <p class="text-lg md:text-xl text-gray-600 mb-12 leading-relaxed">
+        <p class="text-lg md:text-xl mb-12 leading-relaxed" style="color: var(--yc-neutral-gray-800);">
           不眠・不安・気分の落ち込み…まずはお電話でご相談ください。
         </p>
         
@@ -41,8 +41,8 @@
         </div>
         
         <!-- 緊急時注意 -->
-        <div class="mt-12 p-4 bg-orange-50 border-l-4 border-orange-400 rounded">
-          <p class="text-sm text-orange-800">
+        <div class="mt-12 p-4 rounded" style="background-color: var(--yc-semantic-warning-50); border-left: 4px solid var(--yc-semantic-warning-400);">
+          <p class="text-sm" style="color: var(--yc-neutral-gray-800);">
             <AlertTriangle class="w-4 h-4 inline mr-2" />
             緊急の受診が必要な際は119または地域の救急窓口にご相談ください。当サイトでは緊急対応は行っていません。
           </p>

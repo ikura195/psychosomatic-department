@@ -1,53 +1,253 @@
+@import './yamauchi_colors.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* ライトモード用のセマンティックカラー変数（白基調・現行サイト風） */
+    --color-primary: var(--yc-brand-base-300);
+    --color-primary-hover: var(--yc-brand-base-400);
+    --color-primary-focus: var(--yc-semantic-info-300);
+    --color-background: var(--yc-neutral-gray-0);
+    --color-surface: var(--yc-neutral-gray-0);
+    --color-surface-secondary: var(--yc-brand-base-50);
+    --color-text: var(--yc-neutral-gray-900);
+    --color-text-secondary: var(--yc-neutral-gray-800);
+    --color-text-muted: var(--yc-neutral-gray-700);
+    --color-border: var(--yc-neutral-gray-200);
+    --color-border-focus: var(--yc-semantic-info-300);
+    
+    /* アクセシビリティ用の高コントラスト色 */
+    --color-text-high-contrast: var(--yc-neutral-gray-900);
+    --color-primary-accessible: var(--yc-brand-base-400);
+    
+    /* グラデーション用の色彩（現行サイト風の淡い色彩） */
+    --gradient-primary: linear-gradient(135deg, var(--yc-neutral-gray-0), var(--yc-brand-base-50));
+    --gradient-secondary: linear-gradient(135deg, var(--yc-brand-base-50), var(--yc-neutral-gray-0));
+    --gradient-hero: linear-gradient(135deg, var(--yc-neutral-gray-0), var(--yc-brand-base-100));
+    --gradient-subtle: linear-gradient(135deg, var(--yc-brand-base-50), var(--yc-neutral-gray-0));
+  }
+
+  [data-theme="dark"] {
+    /* ダークモード用のセマンティックカラー変数（調整済み） */
+    --color-primary: var(--yc-brand-base-500);
+    --color-primary-hover: var(--yc-brand-base-400);
+    --color-primary-focus: var(--yc-semantic-info-300);
+    --color-background: var(--yc-neutral-gray-950);
+    --color-surface: var(--yc-neutral-gray-900);
+    --color-surface-secondary: var(--yc-neutral-gray-800);
+    --color-text: var(--yc-neutral-gray-100);
+    --color-text-secondary: var(--yc-neutral-gray-200);
+    --color-text-muted: var(--yc-neutral-gray-300);
+    --color-border: var(--yc-neutral-gray-700);
+    --color-border-focus: var(--yc-semantic-info-300);
+    
+    /* アクセシビリティ用の高コントラスト色 */
+    --color-text-high-contrast: var(--yc-neutral-gray-50);
+    --color-primary-accessible: var(--yc-brand-base-400);
+    
+    /* ダークモード用のグラデーション */
+    --gradient-primary: linear-gradient(135deg, var(--yc-neutral-gray-800), var(--yc-neutral-gray-900));
+    --gradient-secondary: linear-gradient(135deg, var(--yc-neutral-gray-700), var(--yc-neutral-gray-800));
+    --gradient-hero: linear-gradient(135deg, var(--yc-neutral-gray-900), var(--yc-neutral-gray-950));
+    --gradient-subtle: linear-gradient(135deg, var(--yc-neutral-gray-800), var(--yc-neutral-gray-900));
+  }
+
+  /* ダークモード用のメディアクエリ */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --color-primary: var(--yc-brand-base-500);
+      --color-primary-hover: var(--yc-brand-base-400);
+      --color-primary-focus: var(--yc-semantic-info-300);
+      --color-background: var(--yc-neutral-gray-950);
+      --color-surface: var(--yc-neutral-gray-900);
+      --color-surface-secondary: var(--yc-neutral-gray-800);
+      --color-text: var(--yc-neutral-gray-100);
+      --color-text-secondary: var(--yc-neutral-gray-200);
+      --color-text-muted: var(--yc-neutral-gray-300);
+      --color-border: var(--yc-neutral-gray-700);
+      --color-border-focus: var(--yc-semantic-info-300);
+      
+      /* アクセシビリティ用の高コントラスト色 */
+      --color-text-high-contrast: var(--yc-neutral-gray-50);
+      --color-primary-accessible: var(--yc-brand-base-400);
+      
+      /* ダークモード用のグラデーション */
+      --gradient-primary: linear-gradient(135deg, var(--yc-neutral-gray-800), var(--yc-neutral-gray-900));
+      --gradient-secondary: linear-gradient(135deg, var(--yc-neutral-gray-700), var(--yc-neutral-gray-800));
+      --gradient-hero: linear-gradient(135deg, var(--yc-neutral-gray-900), var(--yc-neutral-gray-950));
+      --gradient-subtle: linear-gradient(135deg, var(--yc-neutral-gray-800), var(--yc-neutral-gray-900));
+    }
+  }
+
   html {
     font-family: 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
     line-height: 1.7;
   }
   
   body {
-    @apply text-gray-800 bg-white;
+    background-color: var(--color-background);
+    color: var(--color-text);
     font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   
   h1 {
     @apply text-3xl md:text-4xl font-bold leading-tight;
+    color: var(--color-text);
   }
   
   h2 {
     @apply text-2xl md:text-3xl font-bold leading-tight;
+    color: var(--color-text);
   }
   
   h3 {
     @apply text-xl md:text-2xl font-semibold leading-tight;
+    color: var(--color-text);
+  }
+
+  h4, h5, h6 {
+    color: var(--color-text-secondary);
+  }
+  
+  p {
+    color: var(--color-text-secondary);
   }
   
   a {
-    @apply underline underline-offset-2 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded;
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--color-primary-hover);
+  }
+
+  a:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary-focus);
+    border-radius: 4px;
   }
   
   button {
-    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 rounded;
+    transition: all 0.2s ease;
+  }
+
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary-focus);
+    border-radius: 4px;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 min-h-[44px] inline-flex items-center justify-center;
+    background-color: var(--color-primary);
+    color: var(--color-background);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+  }
+
+  .btn-primary:hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  .btn-primary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary-focus);
   }
   
   .btn-secondary {
-    @apply bg-white hover:bg-gray-50 text-blue-600 font-semibold py-4 px-8 rounded-lg border border-blue-600 transition-colors duration-200 min-h-[44px] inline-flex items-center justify-center;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-primary);
+    transition: all 0.2s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
   }
-  
+
+  .btn-secondary:hover {
+    background-color: var(--color-surface-secondary);
+  }
+
+  .btn-secondary:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary-focus);
+  }
+
+  .card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    transition: all 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
   .section-padding {
     @apply py-16 md:py-24;
   }
   
   .container-custom {
     @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .theme-toggle {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .theme-toggle:hover {
+    background-color: var(--color-surface-secondary);
+  }
+
+  .theme-toggle:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-primary-focus);
+  }
+
+  /* グラデーション用のクラス */
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
   }
 }
