@@ -6,7 +6,7 @@
       <!-- 受診フロー -->
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-brand-base-400 bg-opacity-80 rounded-full flex items-center justify-center mx-auto mb-4" aria-label="ステップ1">
             <span class="text-white font-bold text-lg">1</span>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">お電話でのご予約</h3>
@@ -14,7 +14,7 @@
         </div>
         
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-brand-base-400 bg-opacity-80 rounded-full flex items-center justify-center mx-auto mb-4" aria-label="ステップ2">
             <span class="text-white font-bold text-lg">2</span>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">ご来院・問診票記入</h3>
@@ -22,7 +22,7 @@
         </div>
         
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-brand-base-400 bg-opacity-80 rounded-full flex items-center justify-center mx-auto mb-4" aria-label="ステップ3">
             <span class="text-white font-bold text-lg">3</span>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">診察</h3>
@@ -30,7 +30,7 @@
         </div>
         
         <div class="text-center">
-          <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-brand-base-400 bg-opacity-80 rounded-full flex items-center justify-center mx-auto mb-4" aria-label="ステップ4">
             <span class="text-white font-bold text-lg">4</span>
           </div>
           <h3 class="text-lg font-semibold text-gray-900 mb-2">お会計・次回予約</h3>

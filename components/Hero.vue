@@ -7,10 +7,6 @@
           {{ site.clinicName }}
         </h1>
         
-        <!-- サブタイトル -->
-        <p class="text-lg md:text-xl mb-12 leading-relaxed" style="color: var(--yc-neutral-gray-800);">
-          不眠・不安・気分の落ち込み…まずはお電話でご相談ください。
-        </p>
         
         <!-- CTAボタン -->
         <div class="flex justify-center items-center">
