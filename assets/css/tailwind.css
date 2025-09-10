@@ -23,11 +23,14 @@
     --color-text-high-contrast: var(--yc-neutral-gray-900);
     --color-primary-accessible: var(--yc-brand-base-400);
     
-    /* グラデーション用の色彩（現行サイト風の淡い色彩） */
-    --gradient-primary: linear-gradient(135deg, var(--yc-neutral-gray-0), var(--yc-brand-base-50));
-    --gradient-secondary: linear-gradient(135deg, var(--yc-brand-base-50), var(--yc-neutral-gray-0));
-    --gradient-hero: linear-gradient(135deg, var(--yc-neutral-gray-0), var(--yc-brand-base-100));
-    --gradient-subtle: linear-gradient(135deg, var(--yc-brand-base-50), var(--yc-neutral-gray-0));
+  /* グラデーション用の色彩（現行サイト風の淡い色彩） */
+  --gradient-primary: linear-gradient(135deg, var(--yc-neutral-gray-0), var(--yc-brand-base-50));
+  --gradient-secondary: linear-gradient(135deg, var(--yc-brand-base-50), var(--yc-neutral-gray-0));
+  --gradient-hero: linear-gradient(135deg, var(--yc-neutral-gray-0), var(--yc-brand-base-100));
+  --gradient-subtle: linear-gradient(135deg, var(--yc-brand-base-50), var(--yc-neutral-gray-0));
+  
+  /* アニメーション制御変数 */
+  --animation-enabled: 1;
   }
 
   [data-theme="dark"] {
@@ -249,5 +252,226 @@
   
   .gradient-subtle {
     background: var(--gradient-subtle);
+  }
+
+  /* ヘッダーアニメーション用のクラス */
+  .hero-animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+    background-color: transparent; /* コンテナも透明に */
+  }
+
+  .hero-animation-element {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    opacity: 0.6;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: slideHorizontal 80s linear infinite;
+    animation-play-state: var(--animation-play-state, running);
+    /* パフォーマンス最適化 */
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+    /* テキストを中央に配置 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* レスポンシブ対応 */
+  @media (min-width: 640px) {
+    .hero-animation-element {
+      width: 250px;
+      height: 250px;
+    }
+    .hero-animation-element:nth-child(3) {
+      width: 562px; /* 大きいサイズに戻す */
+      height: 562px; /* 大きいサイズに戻す */
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero-animation-element {
+      width: 300px;
+      height: 300px;
+    }
+    .hero-animation-element:nth-child(3) {
+      width: 675px; /* 大きいサイズに戻す */
+      height: 675px; /* 大きいサイズに戻す */
+    }
+  }
+
+  /* 各画像パターンのスタイル */
+  .hero-animation-element:nth-child(1) {
+    background-image: url('/images/animations/animation_stress_anxiety.png');
+    animation-delay: 0s;
+    top: 10vh;
+    left: 100vw; /* 初期位置を画面外右側に設定 */
+  }
+
+  .hero-animation-element:nth-child(2) {
+    background-image: url('/images/animations/animation_depression_panic.png');
+    animation-delay: 20s; /* 間隔を空ける */
+    top: 20vh;
+    left: 100vw; /* 初期位置を画面外右側に設定 */
+  }
+
+  .hero-animation-element:nth-child(3) {
+    background-image: url('/images/animations/animation_kokoro_main.png');
+    animation-delay: 40s; /* 間隔を空ける */
+    opacity: 0.7; /* メイン要素は少し目立つように */
+    top: 15vh;
+    left: 100vw; /* 初期位置を画面外右側に設定 */
+    width: 450px; /* 大きいサイズに戻す */
+    height: 450px; /* 大きいサイズに戻す */
+  }
+
+  .hero-animation-element:nth-child(4) {
+    background-image: url('/images/animations/animation_menopause_health.png');
+    animation-delay: 60s; /* 間隔を空ける */
+    top: 25vh;
+    left: 100vw; /* 初期位置を画面外右側に設定 */
+  }
+
+  .hero-animation-element:nth-child(5) {
+    background-image: url('/images/animations/animation_insomnia_sleep.png');
+    animation-delay: 80s; /* 間隔を空ける */
+    top: 10vh;
+    left: 100vw; /* 初期位置を画面外右側に設定 */
+  }
+
+  /* 横スライドアニメーション - GPU最適化 */
+  @keyframes slideHorizontal {
+    0% {
+      transform: translate3d(0, 0, 0); /* 初期位置から開始 */
+    }
+    25% {
+      transform: translate3d(-25vw, 10vh, 0);
+    }
+    50% {
+      transform: translate3d(-50vw, 5vh, 0);
+    }
+    75% {
+      transform: translate3d(-75vw, 15vh, 0);
+    }
+    100% {
+      transform: translate3d(-100vw, 0, 0); /* 画面外左側に移動 */
+    }
+  }
+
+  /* アクセシビリティ対応 */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --animation-enabled: 0;
+    }
+    
+    .hero-animation-element {
+      animation-play-state: paused;
+      opacity: 0;
+    }
+  }
+
+  /* アニメーション無効化 */
+  .hero-animation-container[data-animation-disabled="true"] .hero-animation-element {
+    animation-play-state: paused;
+    opacity: 0;
+  }
+
+  /* テキストオーバーレイ用のスタイル */
+
+  .hero-text-item {
+    position: relative;
+    opacity: 0.8; /* 初期透明度を上げて常に見えるように */
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background: transparent; /* 背景を完全に透過 */
+    backdrop-filter: none; /* ブラーを削除 */
+    animation: textFadeInOut 80s linear infinite;
+    /* パフォーマンス最適化 */
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    border: none; /* ボーダーを削除 */
+    z-index: 10; /* 画像の上に表示 */
+  }
+
+  .hero-text-main {
+    background: transparent; /* 背景を完全に透過 */
+    backdrop-filter: none; /* ブラーを削除 */
+    box-shadow: none; /* シャドウを削除 */
+    border: none; /* ボーダーを削除 */
+    transform: scale(1.05); /* メインは少し大きめに */
+    animation: textFadeInOutMain 80s linear infinite;
+    animation-play-state: var(--animation-play-state, running);
+  }
+
+  /* 各テキストアイテムのアニメーションタイミング */
+  .hero-animation-element:nth-child(1) .hero-text-item {
+    animation-delay: 0s;
+  }
+
+  .hero-animation-element:nth-child(2) .hero-text-item {
+    animation-delay: 20s;
+  }
+
+  .hero-animation-element:nth-child(3) .hero-text-item {
+    animation-delay: 40s;
+  }
+
+  .hero-animation-element:nth-child(4) .hero-text-item {
+    animation-delay: 60s;
+  }
+
+  .hero-animation-element:nth-child(5) .hero-text-item {
+    animation-delay: 80s;
+  }
+
+
+  /* テキストフェードイン・アウトアニメーション - GPU最適化 */
+  @keyframes textFadeInOut {
+    0%, 10%, 90%, 100% {
+      opacity: 0.8;
+      transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) scale(1.05);
+    }
+  }
+
+  /* メインテキストの特別なアニメーション - GPU最適化 */
+  .hero-text-main {
+    animation: textFadeInOutMain 80s linear infinite;
+  }
+
+  @keyframes textFadeInOutMain {
+    0%, 10%, 90%, 100% {
+      opacity: 0.9;
+      transform: scale(1.05);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+  }
+
+  /* アクセシビリティ対応 - テキストオーバーレイ */
+  @media (prefers-reduced-motion: reduce) {
+    .hero-text-item {
+      animation-play-state: paused;
+      opacity: 0;
+    }
   }
 }
