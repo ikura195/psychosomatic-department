@@ -6,40 +6,69 @@
         
         <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
           <div class="overflow-x-auto">
-            <table class="w-full">
+            <table class="w-full border-collapse min-w-[400px]">
               <thead>
                 <tr class="bg-gray-50">
-                  <th class="px-6 py-4 text-left font-semibold text-gray-900">曜日</th>
-                  <th class="px-6 py-4 text-center font-semibold text-gray-900">診療時間</th>
+                  <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">診療時間</th>
+                  <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">月</th>
+                  <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">火</th>
+                  <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">水</th>
+                  <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">木</th>
+                  <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">金</th>
+                  <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">土</th>
                 </tr>
               </thead>
               <tbody>
-                <tr
-                  v-for="(day, key) in site.hours"
-                  :key="key"
-                  class="border-t border-gray-200"
-                >
-                  <td class="px-6 py-4 font-medium text-gray-900">
-                    {{ dayNames[key as DayKey] }}曜日
+                <tr>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center font-medium text-gray-900 border border-gray-300 text-xs sm:text-sm">午前9:30~12:30</td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">•</span>
                   </td>
-                  <td class="px-6 py-4 text-center">
-                    <div v-if="day.length === 0" class="text-gray-500">
-                      休診
-                    </div>
-                    <div v-else class="space-y-1">
-                      <div
-                        v-for="(time, index) in day"
-                        :key="index"
-                        class="text-gray-900"
-                      >
-                        {{ time.start }}〜{{ time.end }}
-                      </div>
-                    </div>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">•</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-red-500 text-lg sm:text-xl">/</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">•</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">•</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">•</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center font-medium text-gray-900 border border-gray-300 text-xs sm:text-sm">午後5:00~7:00</td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">•</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-red-500 text-lg sm:text-xl">-</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-red-500 text-lg sm:text-xl">/</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">•</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">•</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-red-500 text-lg sm:text-xl">/</span>
                   </td>
                 </tr>
               </tbody>
             </table>
           </div>
+        </div>
+        
+        <div class="text-center mb-4">
+          <p class="text-sm text-gray-600">土曜午後・水曜・日曜・祝日休診</p>
+          <p class="text-sm text-gray-600">※初診:要予約</p>
         </div>
         
         <div class="text-center">
