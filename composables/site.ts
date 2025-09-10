@@ -4,12 +4,11 @@ export type TimeRange = { start: string; end: string }
 export type HoursMap = Record<DayKey, TimeRange[]>
 
 export const siteConfig = {
-  clinicName: "{{CLINIC_NAME}}",
+  clinicName: "やまうちクリニック",
   phone: "{{TEL}}",                 // "06-xxxx-xxxx"
   address: "{{ADDRESS}}",
   nearest: "{{STATION}}",           // "〇〇駅〇番出口 徒歩◯分"
   mapUrl: "{{MAP_URL}}",            // Googleマップ等
-  noticeUrl: "{{NOTICE_URL}}",      // Notion/Googleカレンダー公開URL
   hours: {
     mon: [{ start: "09:30", end: "12:30" }, { start: "15:00", end: "18:00" }],
     tue: [{ start: "09:30", end: "12:30" }, { start: "15:00", end: "18:00" }],
@@ -22,8 +21,8 @@ export const siteConfig = {
   } as HoursMap,
   lastCallNote: "最終受付は各終了30分前",
   seo: {
-    title: "{{CLINIC_NAME}}｜心療内科・精神科",
-    description: "不眠・不安・気分の落ち込みなどでお困りの方へ。初診はお電話でご相談ください。診療時間・アクセス・臨時案内を掲載。"
+    title: "やまうちクリニック｜心療内科・精神科",
+    description: "不眠・不安・気分の落ち込みなどでお困りの方へ。初診はお電話でご相談ください。診療時間・アクセスを掲載。"
   }
 } as const
 

@@ -2,7 +2,8 @@
   <div>
     <!-- メインコンテンツ -->
     <Hero />
-    <Principles />
+    <Notices />
+    <Philosophy />
     <Features />
     <FirstVisitFlow />
     <Hours />
@@ -18,7 +19,8 @@
 <script setup lang="ts">
 // Components
 import Hero from '~/components/Hero.vue'
-import Principles from '~/components/Principles.vue'
+import Notices from '~/components/Notices.vue'
+import Philosophy from '~/components/Philosophy.vue'
 import Features from '~/components/Features.vue'
 import FirstVisitFlow from '~/components/FirstVisitFlow.vue'
 import Hours from '~/components/Hours.vue'

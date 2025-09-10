@@ -7,6 +7,12 @@ export default defineNuxtConfig({
     host: '0.0.0.0'
   },
   css: ['~/assets/css/tailwind.css'],
+  runtimeConfig: {
+    public: {
+      notionApiKey: process.env.NOTION_API_KEY,
+      notionDatabaseId: process.env.NOTION_DATABASE_ID
+    }
+  },
   app: {
     head: {
       htmlAttrs: {

@@ -49,18 +49,6 @@
           <h4 class="text-lg font-semibold mb-6" style="color: var(--yc-neutral-gray-100);">リンク</h4>
           <div class="space-y-3">
             <a
-              :href="site.noticeUrl"
-              target="_blank"
-              rel="noopener"
-              class="flex items-center transition-colors"
-              style="color: var(--yc-neutral-gray-300);"
-              @mouseenter="$event.target.style.color = 'var(--yc-neutral-gray-100)'"
-              @mouseleave="$event.target.style.color = 'var(--yc-neutral-gray-300)'"
-            >
-              <ExternalLink class="w-4 h-4 mr-2" />
-              臨時案内・休診情報
-            </a>
-            <a
               href="#privacy"
               class="flex items-center transition-colors"
               style="color: var(--yc-neutral-gray-300);"
@@ -85,7 +73,7 @@
 </template>
 
 <script setup lang="ts">
-import { MapPin, Phone, ExternalLink, FileText } from 'lucide-vue-next'
+import { MapPin, Phone, FileText } from 'lucide-vue-next'
 
 const site = useSite()
 </script>

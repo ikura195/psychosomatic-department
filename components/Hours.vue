@@ -42,10 +42,8 @@
           </div>
         </div>
         
-        <div class="text-center space-y-4">
+        <div class="text-center">
           <p class="text-sm text-gray-600">{{ site.lastCallNote }}</p>
-          
-          <NoticeLink />
         </div>
       </div>
     </div>
@@ -55,7 +53,6 @@
 <script setup lang="ts">
 import type { DayKey } from '~/composables/site'
 import { dayNames } from '~/composables/site'
-import NoticeLink from './NoticeLink.vue'
 
 const site = useSite()
 </script>
