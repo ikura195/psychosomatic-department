@@ -42,22 +42,28 @@
         
         <!-- 地図 -->
         <div class="bg-white rounded-lg shadow-sm overflow-hidden">
-          <div class="aspect-w-16 aspect-h-12 bg-gray-200">
-            <div class="flex items-center justify-center h-64">
-              <div class="text-center">
-                <MapPin class="w-12 h-12 mx-auto text-gray-400 mb-4" />
-                <p class="text-gray-500 mb-4">地図を表示</p>
-                <a
-                  :href="site.mapUrl"
-                  target="_blank"
-                  rel="noopener"
-                  class="btn-primary"
-                >
-                  <ExternalLink class="w-4 h-4 mr-2" />
-                  Googleマップで開く
-                </a>
+          <div class="aspect-w-16 aspect-h-12 relative">
+            <!-- ストリートビュー画像 -->
+            <a
+              :href="site.mapUrl"
+              target="_blank"
+              rel="noopener"
+              class="relative h-64 w-full block cursor-pointer group"
+            >
+              <img
+                :src="streetViewImageUrl"
+                alt="やまうちクリニック ストリートビュー"
+                class="w-full h-full object-cover"
+                @error="handleImageError"
+              />
+              <!-- オーバーレイ -->
+              <div class="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center group-hover:bg-opacity-30 transition-all duration-200">
+                <div class="text-center">
+                  <MapPin class="w-8 h-8 mx-auto mb-2" style="color: #CDE8E0;" />
+                  <p class="text-sm font-medium mb-3" style="color: #CDE8E0;">やまうちクリニック</p>
+                </div>
               </div>
-            </div>
+            </a>
           </div>
         </div>
       </div>
@@ -66,7 +72,15 @@
 </template>
 
 <script setup lang="ts">
-import { MapPin, Phone, ExternalLink } from 'lucide-vue-next'
+import { MapPin, Phone } from 'lucide-vue-next'
 
 const site = useSite()
+
+// ストリートビュー画像のURL
+const streetViewImageUrl = 'https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&w=900&h=600&pitch=-21.375175266729656&panoid=iLr20S4MA8kT6GD-MDfeUg&yaw=66.33358063243625'
+
+// 画像読み込みエラーハンドリング
+const handleImageError = () => {
+  console.warn('ストリートビュー画像の読み込みに失敗しました')
+}
 </script>

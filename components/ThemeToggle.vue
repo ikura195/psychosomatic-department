@@ -10,9 +10,32 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
 import { Sun, Moon } from 'lucide-vue-next'
 
 const isDark = ref(false)
+
+// テーマを適用
+const applyTheme = () => {
+  const html = document.documentElement
+  
+  if (isDark.value) {
+    html.setAttribute('data-theme', 'dark')
+  } else {
+    html.removeAttribute('data-theme')
+  }
+}
+
+// テーマ切り替え
+const toggleTheme = () => {
+  isDark.value = !isDark.value
+  applyTheme()
+  localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
+}
+
+// メディアクエリの参照を保持
+let mediaQuery: MediaQueryList | null = null
+let handleChange: ((e: MediaQueryListEvent) => void) | null = null
 
 // 初期化時にテーマを設定
 onMounted(() => {
@@ -27,31 +50,11 @@ onMounted(() => {
   }
   
   applyTheme()
-})
-
-// テーマ切り替え
-const toggleTheme = () => {
-  isDark.value = !isDark.value
-  applyTheme()
-  localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
-}
-
-// テーマを適用
-const applyTheme = () => {
-  const html = document.documentElement
   
-  if (isDark.value) {
-    html.setAttribute('data-theme', 'dark')
-  } else {
-    html.removeAttribute('data-theme')
-  }
-}
-
-// システム設定の変更を監視
-onMounted(() => {
-  const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+  // システム設定の変更を監視
+  mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
   
-  const handleChange = (e: MediaQueryListEvent) => {
+  handleChange = (e: MediaQueryListEvent) => {
     if (!localStorage.getItem('theme')) {
       isDark.value = e.matches
       applyTheme()
@@ -59,9 +62,12 @@ onMounted(() => {
   }
   
   mediaQuery.addEventListener('change', handleChange)
-  
-  onUnmounted(() => {
+})
+
+// クリーンアップ
+onUnmounted(() => {
+  if (mediaQuery && handleChange) {
     mediaQuery.removeEventListener('change', handleChange)
-  })
+  }
 })
 </script>
