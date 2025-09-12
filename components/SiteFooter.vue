@@ -23,9 +23,18 @@
             <div class="flex flex-col">
               <h4 class="text-lg font-semibold mb-6" style="color: var(--yc-neutral-gray-900);">初めての方へ</h4>
               <div class="space-y-3">
-                <a href="#features" class="block transition-colors" style="color: var(--yc-neutral-gray-800);" @mouseenter="$event.target.style.color = 'var(--yc-neutral-gray-900)'" @mouseleave="$event.target.style.color = 'var(--yc-neutral-gray-800)'">特徴</a>
-                <a href="#first-visit" class="block transition-colors" style="color: var(--yc-neutral-gray-800);" @mouseenter="$event.target.style.color = 'var(--yc-neutral-gray-900)'" @mouseleave="$event.target.style.color = 'var(--yc-neutral-gray-800)'">受診の流れ</a>
-                <a href="#faq" class="block transition-colors" style="color: var(--yc-neutral-gray-800);" @mouseenter="$event.target.style.color = 'var(--yc-neutral-gray-900)'" @mouseleave="$event.target.style.color = 'var(--yc-neutral-gray-800)'">よくある質問</a>
+                <a href="#features" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
+                  <span class="relative">- 特徴</span>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
+                </a>
+                <a href="#first-visit" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
+                  <span class="relative">- 受診の流れ</span>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
+                </a>
+                <a href="#faq" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
+                  <span class="relative">- よくある質問</span>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
+                </a>
               </div>
             </div>
             
@@ -33,8 +42,14 @@
             <div class="flex flex-col">
               <h4 class="text-lg font-semibold mb-6" style="color: var(--yc-neutral-gray-900);">クリニックについて</h4>
               <div class="space-y-3">
-                <a href="#notices" class="block transition-colors" style="color: var(--yc-neutral-gray-800);" @mouseenter="$event.target.style.color = 'var(--yc-neutral-gray-900)'" @mouseleave="$event.target.style.color = 'var(--yc-neutral-gray-800)'">お知らせ</a>
-                <a href="#philosophy" class="block transition-colors" style="color: var(--yc-neutral-gray-800);" @mouseenter="$event.target.style.color = 'var(--yc-neutral-gray-900)'" @mouseleave="$event.target.style.color = 'var(--yc-neutral-gray-800)'">診療方針・理念</a>
+                <a href="#notices" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
+                  <span class="relative">- お知らせ</span>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
+                </a>
+                <a href="#philosophy" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
+                  <span class="relative">- 診療方針・理念</span>
+                  <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
+                </a>
               </div>
             </div>
           </div>
@@ -56,3 +71,15 @@
 <script setup lang="ts">
 const site = useSite()
 </script>
+
+<style scoped>
+.footer-link:hover span:last-child {
+  width: 100%;
+}
+.footer-link {
+  text-decoration: none;
+}
+.footer-link:hover {
+  color: var(--yc-brand-base-600) !important;
+}
+</style>
