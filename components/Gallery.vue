@@ -34,6 +34,11 @@ const images = [
     caption: 'クリニック外観'
   },
   {
+    src: '/clinic/night-exterior.webp',
+    alt: 'クリニック夜外観',
+    caption: 'クリニック夜外観'
+  },
+  {
     src: '/clinic/reception.webp',
     alt: '受付カウンター',
     caption: '受付'
@@ -44,19 +49,14 @@ const images = [
     caption: '待合室'
   },
   {
-    src: '/clinic/consultation-room.webp',
-    alt: '診察室',
-    caption: '診察室'
+    src: '/clinic/consultation-room-front.webp',
+    alt: '診察室前',
+    caption: '診察室前'
   },
   {
     src: '/clinic/hallway.webp',
     alt: '院内廊下',
     caption: '院内廊下'
-  },
-  {
-    src: '/clinic/restroom.webp',
-    alt: 'お手洗い',
-    caption: 'お手洗い'
   }
 ]
 </script>
