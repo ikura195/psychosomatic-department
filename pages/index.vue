@@ -2,7 +2,6 @@
   <div>
     <!-- メインコンテンツ -->
     <Hero />
-    <AnimationSection />
     <Notices />
     <Philosophy />
     <Features />
@@ -20,7 +19,6 @@
 <script setup lang="ts">
 // Components
 import Hero from '~/components/Hero.vue'
-import AnimationSection from '~/components/AnimationSection.vue'
 import Notices from '~/components/Notices.vue'
 import Philosophy from '~/components/Philosophy.vue'
 import Features from '~/components/Features.vue'
