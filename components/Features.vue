@@ -1,5 +1,5 @@
 <template>
-  <section class="section-padding">
+  <section id="features" class="section-padding">
     <div class="container-custom">
       <h2 class="text-3xl font-bold text-center mb-16" style="color: var(--yc-neutral-gray-900);">当院の特徴</h2>
       

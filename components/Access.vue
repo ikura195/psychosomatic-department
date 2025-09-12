@@ -6,7 +6,7 @@
       <div class="grid lg:grid-cols-2 gap-12 items-start">
         <!-- アクセス情報 -->
         <div class="space-y-6">
-          <div class="pt-6 pb-8 px-8 rounded-lg shadow-sm h-80 flex flex-col justify-between" style="background-color: var(--yc-neutral-gray-0);">
+          <div class="pt-6 pb-8 px-8 rounded-lg shadow-sm h-85 flex flex-col justify-between" style="background-color: var(--yc-neutral-gray-0);">
             <!-- 所在地セクション -->
             <div>
               <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -19,6 +19,7 @@
                 <h4 class="text-base font-semibold text-gray-900 mb-2">最寄り駅</h4>
                 <p class="text-base text-gray-700">{{ site.nearest }}</p>
               </div>
+              
             </div>
             
             <!-- 電話番号セクション -->
@@ -45,14 +46,14 @@
         </div>
         
         <!-- 地図 -->
-        <div class="pt-6 rounded-lg shadow-sm overflow-hidden" style="background-color: var(--yc-neutral-gray-0);">
-          <div class="aspect-w-16 aspect-h-12 relative">
+        <div class="rounded-lg shadow-sm overflow-hidden" style="background-color: var(--yc-neutral-gray-0);">
+          <div class="relative">
             <!-- ストリートビュー画像 -->
             <a
               :href="site.mapUrl"
               target="_blank"
               rel="noopener"
-              class="relative h-80 w-full block cursor-pointer group"
+              class="relative h-85 w-full block cursor-pointer group"
             >
               <img
                 :src="streetViewImageUrl"

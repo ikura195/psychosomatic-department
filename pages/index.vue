@@ -6,6 +6,7 @@
     <Philosophy />
     <Features />
     <FirstVisitFlow />
+    <FAQ />
     <Gallery />
     <Hours />
     <Access />
@@ -23,6 +24,7 @@ import Notices from '~/components/Notices.vue'
 import Philosophy from '~/components/Philosophy.vue'
 import Features from '~/components/Features.vue'
 import FirstVisitFlow from '~/components/FirstVisitFlow.vue'
+import FAQ from '~/components/FAQ.vue'
 import Hours from '~/components/Hours.vue'
 import Gallery from '~/components/Gallery.vue'
 import Access from '~/components/Access.vue'
