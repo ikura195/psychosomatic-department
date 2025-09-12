@@ -1,5 +1,5 @@
 <template>
-  <section class="section-padding bg-white">
+  <section class="section-padding">
     <div class="container-custom">
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-16">院内写真</h2>
       

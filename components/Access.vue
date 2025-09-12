@@ -1,12 +1,12 @@
 <template>
-  <section id="access" class="section-padding bg-gray-50">
+  <section id="access" class="section-padding">
     <div class="container-custom">
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-16">アクセス</h2>
       
       <div class="grid lg:grid-cols-2 gap-12 items-start">
         <!-- アクセス情報 -->
         <div class="space-y-6">
-          <div class="bg-white pt-6 pb-8 px-8 rounded-lg shadow-sm h-80 flex flex-col justify-between">
+          <div class="pt-6 pb-8 px-8 rounded-lg shadow-sm h-80 flex flex-col justify-between" style="background-color: var(--yc-neutral-gray-0);">
             <!-- 所在地セクション -->
             <div>
               <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
@@ -45,7 +45,7 @@
         </div>
         
         <!-- 地図 -->
-        <div class="bg-white pt-6 rounded-lg shadow-sm overflow-hidden">
+        <div class="pt-6 rounded-lg shadow-sm overflow-hidden" style="background-color: var(--yc-neutral-gray-0);">
           <div class="aspect-w-16 aspect-h-12 relative">
             <!-- ストリートビュー画像 -->
             <a

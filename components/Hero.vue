@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-[85vh] flex items-center bg-white pt-20">
+  <section class="relative min-h-[85vh] flex items-center pt-20">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto text-center">
         <!-- メインヘッダー -->

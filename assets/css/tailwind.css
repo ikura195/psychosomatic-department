@@ -10,7 +10,7 @@
     --color-primary: var(--yc-brand-base-300);
     --color-primary-hover: var(--yc-brand-base-400);
     --color-primary-focus: var(--yc-semantic-info-300);
-    --color-background: var(--yc-neutral-gray-0);
+    --color-background: var(--yc-brand-glow-200);
     --color-surface: var(--yc-neutral-gray-0);
     --color-surface-secondary: var(--yc-brand-base-50);
     --color-text: var(--yc-neutral-gray-900);
@@ -38,7 +38,7 @@
     --color-primary: var(--yc-brand-base-500);
     --color-primary-hover: var(--yc-brand-base-400);
     --color-primary-focus: var(--yc-semantic-info-300);
-    --color-background: var(--yc-neutral-gray-950);
+    --color-background: var(--yc-brand-glow-200);
     --color-surface: var(--yc-neutral-gray-900);
     --color-surface-secondary: var(--yc-neutral-gray-800);
     --color-text: var(--yc-neutral-gray-100);
@@ -64,7 +64,7 @@
       --color-primary: var(--yc-brand-base-500);
       --color-primary-hover: var(--yc-brand-base-400);
       --color-primary-focus: var(--yc-semantic-info-300);
-      --color-background: var(--yc-neutral-gray-950);
+      --color-background: var(--yc-brand-glow-300);
       --color-surface: var(--yc-neutral-gray-900);
       --color-surface-secondary: var(--yc-neutral-gray-800);
       --color-text: var(--yc-neutral-gray-100);

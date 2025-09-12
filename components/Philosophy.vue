@@ -1,5 +1,5 @@
 <template>
-  <section class="section-padding" style="background-color: var(--yc-neutral-gray-0);">
+  <section class="section-padding">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-3xl font-bold mb-12" style="color: var(--yc-neutral-gray-900);">診療方針・理念</h2>

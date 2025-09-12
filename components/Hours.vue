@@ -1,10 +1,10 @@
 <template>
-  <section class="section-padding bg-gray-50">
+  <section class="section-padding">
     <div class="container-custom">
       <div class="max-w-4xl mx-auto">
         <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">診療時間</h2>
         
-        <div class="bg-white rounded-lg shadow-sm overflow-hidden mb-8">
+        <div class="rounded-lg shadow-sm overflow-hidden mb-8" style="background-color: var(--yc-neutral-gray-0);">
           <div class="overflow-x-auto">
             <table class="w-full border-collapse min-w-[400px]">
               <thead>
