@@ -1,7 +1,8 @@
 <template>
   <Disclosure v-slot="{ open }">
     <DisclosureButton
-      class="flex justify-between w-full px-6 py-4 text-left text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75 transition-colors duration-200"
+      class="flex justify-between w-full px-6 py-4 text-left text-gray-900 rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-blue-500 focus-visible:ring-opacity-75 transition-colors duration-200"
+      style="background-color: var(--yc-brand-glow-400);"
     >
       <span class="font-medium">{{ question }}</span>
       <ChevronDown
@@ -9,7 +10,7 @@
         class="h-5 w-5 text-gray-500 transition-transform duration-200"
       />
     </DisclosureButton>
-    <DisclosurePanel class="px-6 pt-4 pb-6 text-gray-700 bg-white rounded-b-lg border-x border-b border-gray-200">
+    <DisclosurePanel class="px-6 pt-4 pb-6 text-gray-700 rounded-b-lg border-x border-b border-gray-200" style="background-color: var(--yc-brand-base-100);">
       {{ answer }}
     </DisclosurePanel>
   </Disclosure>
