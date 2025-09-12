@@ -6,6 +6,8 @@
       <ThemeToggle />
     </div>
     <NuxtPage />
+    <!-- フローティング電話ボタン -->
+    <FloatingCallButton />
   </div>
 </template>
 

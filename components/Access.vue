@@ -1,5 +1,5 @@
 <template>
-  <section class="section-padding bg-gray-50">
+  <section id="access" class="section-padding bg-gray-50">
     <div class="container-custom">
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-16">アクセス</h2>
       
@@ -22,7 +22,7 @@
             </div>
             
             <!-- 電話番号セクション -->
-            <div class="border-t pt-6">
+            <div id="phone-reservation" class="border-t pt-6">
               <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <Phone class="w-5 h-5 mr-2 text-blue-600" />
                 お電話でのご予約

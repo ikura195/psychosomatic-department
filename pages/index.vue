@@ -2,12 +2,13 @@
   <div>
     <!-- メインコンテンツ -->
     <Hero />
+    <AnimationSection />
     <Notices />
     <Philosophy />
     <Features />
     <FirstVisitFlow />
-    <Hours />
     <Gallery />
+    <Hours />
     <Access />
     <SiteFooter />
     
@@ -19,6 +20,7 @@
 <script setup lang="ts">
 // Components
 import Hero from '~/components/Hero.vue'
+import AnimationSection from '~/components/AnimationSection.vue'
 import Notices from '~/components/Notices.vue'
 import Philosophy from '~/components/Philosophy.vue'
 import Features from '~/components/Features.vue'
@@ -90,6 +92,8 @@ useHead({
 
 // Viewport設定
 useHead({
-  viewport: 'width=device-width, initial-scale=1'
+  meta: [
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' }
+  ]
 })
 </script>
