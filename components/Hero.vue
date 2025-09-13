@@ -148,7 +148,7 @@ const site = useSite()
 
 @keyframes float1 {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(-15px);
   }
   25% {
     transform: translateX(-30vw) translateY(-20px);
@@ -160,13 +160,13 @@ const site = useSite()
     transform: translateX(-70vw) translateY(20px);
   }
   100% {
-    transform: translateX(-120vw) translateY(0);
+    transform: translateX(-120vw) translateY(-15px);
   }
 }
 
 @keyframes float2 {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(15px);
   }
   25% {
     transform: translateX(-35vw) translateY(30px);
@@ -178,13 +178,13 @@ const site = useSite()
     transform: translateX(-75vw) translateY(25px);
   }
   100% {
-    transform: translateX(-120vw) translateY(0);
+    transform: translateX(-120vw) translateY(10px);
   }
 }
 
 @keyframes float3 {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(-10px);
   }
   25% {
     transform: translateX(-40vw) translateY(-25px);
@@ -196,13 +196,13 @@ const site = useSite()
     transform: translateX(-80vw) translateY(-20px);
   }
   100% {
-    transform: translateX(-120vw) translateY(0);
+    transform: translateX(-120vw) translateY(-20px);
   }
 }
 
 @keyframes float4 {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(20px);
   }
   25% {
     transform: translateX(-45vw) translateY(20px);
@@ -214,13 +214,13 @@ const site = useSite()
     transform: translateX(-85vw) translateY(30px);
   }
   100% {
-    transform: translateX(-120vw) translateY(0);
+    transform: translateX(-120vw) translateY(5px);
   }
 }
 
 @keyframes float5 {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: translateX(0) translateY(-25px);
   }
   25% {
     transform: translateX(-40vw) translateY(-30px);
@@ -232,7 +232,7 @@ const site = useSite()
     transform: translateX(-80vw) translateY(-25px);
   }
   100% {
-    transform: translateX(-120vw) translateY(0);
+    transform: translateX(-120vw) translateY(-30px);
   }
 }
 
