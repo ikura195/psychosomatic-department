@@ -31,27 +31,47 @@
         </div>
         
         <!-- お知らせがない場合 -->
-        <div v-else-if="!notice" class="p-8 rounded-lg" style="background-color: var(--yc-brand-base-50); border: 1px solid var(--yc-brand-base-200);">
-          <div class="flex items-center justify-center mb-4">
-            <Info class="w-8 h-8" style="color: var(--yc-brand-base-500);" />
+        <div v-else-if="!notice">
+          <!-- 緊急時注意 -->
+          <div class="mb-8 p-4 rounded" style="background-color: var(--yc-semantic-warning-50); border-left: 4px solid var(--yc-semantic-warning-400);">
+            <p class="text-sm" style="color: var(--yc-neutral-gray-800);">
+              <AlertTriangle class="w-4 h-4 inline mr-2" />
+              緊急の受診が必要な際は119または地域の救急窓口にご相談ください。当サイトでは緊急対応は行っていません。
+            </p>
           </div>
-          <h3 class="text-lg font-semibold mb-2" style="color: var(--yc-neutral-gray-900);">現在お知らせはありません</h3>
-          <p style="color: var(--yc-neutral-gray-700);">
-            新しいお知らせがございましたら、こちらに表示されます。
-          </p>
+          
+          <div class="p-8 rounded-lg" style="background-color: var(--yc-brand-base-50); border: 1px solid var(--yc-brand-base-200);">
+            <div class="flex items-center justify-center mb-4">
+              <Info class="w-8 h-8" style="color: var(--yc-brand-base-500);" />
+            </div>
+            <h3 class="text-lg font-semibold mb-2" style="color: var(--yc-neutral-gray-900);">現在お知らせはありません</h3>
+            <p style="color: var(--yc-neutral-gray-700);">
+              新しいお知らせがございましたら、こちらに表示されます。
+            </p>
+          </div>
         </div>
         
         <!-- お知らせ表示 -->
-        <div v-else class="text-left">
-          <div class="p-8 rounded-lg" style="background-color: var(--yc-brand-base-50); border: 1px solid var(--yc-brand-base-200);">
-            <div class="flex items-center justify-between mb-4">
-              <h3 class="text-xl font-semibold" style="color: var(--yc-neutral-gray-900);">{{ notice.title }}</h3>
-              <span class="text-sm px-3 py-1 rounded-full" style="background-color: var(--yc-brand-base-200); color: var(--yc-neutral-gray-700);">
-                {{ formatDate(notice.date) }}
-              </span>
-            </div>
-            <div class="prose max-w-none" style="color: var(--yc-neutral-gray-900) !important;">
-              <p class="leading-relaxed whitespace-pre-line" style="color: var(--yc-neutral-gray-900) !important;">{{ notice.content }}</p>
+        <div v-else>
+          <!-- 緊急時注意 -->
+          <div class="mb-8 p-4 rounded" style="background-color: var(--yc-semantic-warning-50); border-left: 4px solid var(--yc-semantic-warning-400);">
+            <p class="text-sm" style="color: var(--yc-neutral-gray-800);">
+              <AlertTriangle class="w-4 h-4 inline mr-2" />
+              緊急の受診が必要な際は119または地域の救急窓口にご相談ください。当サイトでは緊急対応は行っていません。
+            </p>
+          </div>
+          
+          <div class="text-left">
+            <div class="p-8 rounded-lg" style="background-color: var(--yc-brand-base-50); border: 1px solid var(--yc-brand-base-200);">
+              <div class="flex items-center justify-between mb-4">
+                <h3 class="text-xl font-semibold" style="color: var(--yc-neutral-gray-900);">{{ notice.title }}</h3>
+                <span class="text-sm px-3 py-1 rounded-full" style="background-color: var(--yc-brand-base-200); color: var(--yc-neutral-gray-700);">
+                  {{ formatDate(notice.date) }}
+                </span>
+              </div>
+              <div class="prose max-w-none" style="color: var(--yc-neutral-gray-900) !important;">
+                <p class="leading-relaxed whitespace-pre-line" style="color: var(--yc-neutral-gray-900) !important;">{{ notice.content }}</p>
+              </div>
             </div>
           </div>
         </div>

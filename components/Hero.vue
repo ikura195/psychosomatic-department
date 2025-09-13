@@ -19,13 +19,6 @@
           </a>
         </div>
         
-        <!-- 緊急時注意 -->
-        <div class="mt-12 p-4 rounded" style="background-color: var(--yc-semantic-warning-50); border-left: 4px solid var(--yc-semantic-warning-400);">
-          <p class="text-sm" style="color: var(--yc-neutral-gray-800);">
-            <AlertTriangle class="w-4 h-4 inline mr-2" />
-            緊急の受診が必要な際は119または地域の救急窓口にご相談ください。当サイトでは緊急対応は行っていません。
-          </p>
-        </div>
         
         <!-- 新年の挨拶画像 -->
         <div class="mt-8">
@@ -42,7 +35,7 @@
 </template>
 
 <script setup lang="ts">
-import { Phone, ExternalLink, AlertTriangle } from 'lucide-vue-next'
+import { Phone, ExternalLink } from 'lucide-vue-next'
 
 const site = useSite()
 </script>
