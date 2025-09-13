@@ -62,7 +62,7 @@ const site = useSite()
 <style scoped>
 .floating-animation {
   position: absolute;
-  opacity: 0.55;
+  opacity: 0.70;
   animation-duration: 35s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
@@ -75,7 +75,7 @@ const site = useSite()
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.2);
 }
 
 /* 各アニメーション画像の倍率設定 */
