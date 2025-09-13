@@ -7,7 +7,6 @@
     <Features />
     <FirstVisitFlow />
     <FAQ />
-    <Gallery />
     <Hours />
     <Access />
     <SiteFooter />
@@ -26,7 +25,6 @@ import Features from '~/components/Features.vue'
 import FirstVisitFlow from '~/components/FirstVisitFlow.vue'
 import FAQ from '~/components/FAQ.vue'
 import Hours from '~/components/Hours.vue'
-import Gallery from '~/components/Gallery.vue'
 import Access from '~/components/Access.vue'
 import SiteFooter from '~/components/SiteFooter.vue'
 import StickyCallBar from '~/components/StickyCallBar.vue'
