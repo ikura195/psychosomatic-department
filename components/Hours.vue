@@ -16,6 +16,7 @@
                   <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">木</th>
                   <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">金</th>
                   <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">土</th>
+                  <th class="px-2 sm:px-4 py-2 sm:py-3 text-center font-semibold text-gray-900 border border-gray-300 text-sm sm:text-base">日/祝</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,6 +40,9 @@
                   <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
                     <span class="text-green-600 text-lg sm:text-xl">•</span>
                   </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-green-600 text-lg sm:text-xl">/</span>
+                  </td>
                 </tr>
                 <tr>
                   <td class="px-2 sm:px-4 py-2 sm:py-3 text-center font-medium text-gray-900 border border-gray-300 text-xs sm:text-sm">午後5:00~7:00</td>
@@ -46,7 +50,7 @@
                     <span class="text-green-600 text-lg sm:text-xl">•</span>
                   </td>
                   <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
-                    <span class="text-red-500 text-lg sm:text-xl">-</span>
+                    <span class="text-red-500 text-lg sm:text-xl">/</span>
                   </td>
                   <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
                     <span class="text-red-500 text-lg sm:text-xl">/</span>
@@ -56,6 +60,9 @@
                   </td>
                   <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
                     <span class="text-green-600 text-lg sm:text-xl">•</span>
+                  </td>
+                  <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
+                    <span class="text-red-500 text-lg sm:text-xl">/</span>
                   </td>
                   <td class="px-2 sm:px-4 py-2 sm:py-3 text-center border border-gray-300">
                     <span class="text-red-500 text-lg sm:text-xl">/</span>
