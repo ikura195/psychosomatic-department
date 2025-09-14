@@ -73,13 +73,9 @@
           </div>
         </div>
         
-        <div class="text-center mb-4">
+        <div class="text-center">
           <p class="text-sm text-gray-600">土曜午後・水曜・日曜・祝日休診</p>
           <p class="text-sm text-gray-600">※初診:要予約</p>
-        </div>
-        
-        <div class="text-center">
-          <p class="text-sm text-gray-600">{{ site.lastCallNote }}</p>
         </div>
       </div>
     </div>

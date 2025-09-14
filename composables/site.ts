@@ -19,7 +19,6 @@ export const siteConfig = {
     sun: [],
     hol: []
   } as HoursMap,
-  lastCallNote: "最終受付は各終了30分前",
   seo: {
     title: "やまうちクリニック｜心療内科・精神科",
     description: "不眠・不安・気分の落ち込みなどでお困りの方へ。初診はお電話でご相談ください。診療時間・アクセスを掲載。"

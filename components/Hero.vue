@@ -1,5 +1,5 @@
 <template>
-  <section class="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
+  <section class="relative min-h-[85vh] flex items-center pt-20 overflow-hidden md:bg-transparent" style="background-color: var(--yc-brand-glow-900);">
     <!-- アニメーション背景 -->
     <div class="absolute inset-0 pointer-events-none">
       <div class="floating-animation animation-1">

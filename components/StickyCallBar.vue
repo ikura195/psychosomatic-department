@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden" style="background-color: var(--yc-neutral-gray-0); border-top: 1px solid var(--yc-neutral-gray-200);">
+  <div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden" style="background-color: var(--yc-brand-glow-900); border-top: 1px solid var(--yc-brand-glow-800);">
     <div class="flex">
       <a
         :href="`tel:${site.phone}`"
