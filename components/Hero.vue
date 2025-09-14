@@ -32,7 +32,7 @@
           <img 
             src="/images/animations/snake.jpg" 
             alt="2025年新年の挨拶 - 一陽来復" 
-            class="mx-auto max-w-full h-auto rounded-lg shadow-lg"
+            class="mx-auto max-w-full h-auto rounded-lg"
             style="max-height: 300px;"
           />
         </div>
