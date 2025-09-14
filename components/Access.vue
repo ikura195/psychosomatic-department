@@ -10,7 +10,7 @@
             <!-- 所在地セクション -->
             <div>
               <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <MapPin class="w-5 h-5 mr-2 text-blue-600" />
+                <MapPin class="w-5 h-5 mr-2" style="color: var(--yc-brand-base-600);" />
                 所在地
               </h3>
               <p class="text-base text-gray-700 mb-4">{{ site.address }}</p>
@@ -25,13 +25,16 @@
             <!-- 電話番号セクション -->
             <div id="phone-reservation" class="border-t pt-6">
               <h3 class="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <Phone class="w-5 h-5 mr-2 text-blue-600" />
+                <Phone class="w-5 h-5 mr-2" style="color: var(--yc-brand-base-600);" />
                 お電話でのご予約
               </h3>
               <div class="space-y-4">
                 <a
                   :href="`tel:${site.phone}`"
-                  class="block text-3xl font-bold text-blue-600 hover:text-blue-700 transition-colors"
+                  class="block text-3xl font-bold transition-colors"
+                  style="color: var(--yc-brand-base-600);"
+                  @mouseenter="handleMouseEnter"
+                  @mouseleave="handleMouseLeave"
                   data-analytics-id="tel-cta-access"
                 >
                   {{ site.phone }}
@@ -87,5 +90,16 @@ const streetViewImageUrl = 'https://streetviewpixels-pa.googleapis.com/v1/thumbn
 // 画像読み込みエラーハンドリング
 const handleImageError = () => {
   console.warn('ストリートビュー画像の読み込みに失敗しました')
+}
+
+// ホバーエフェクト
+const handleMouseEnter = (event: MouseEvent) => {
+  const target = event.target as HTMLElement
+  target.style.color = 'var(--yc-brand-base-700)'
+}
+
+const handleMouseLeave = (event: MouseEvent) => {
+  const target = event.target as HTMLElement
+  target.style.color = 'var(--yc-brand-base-600)'
 }
 </script>
