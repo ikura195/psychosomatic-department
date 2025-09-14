@@ -1,6 +1,8 @@
 <template>
   <div>
     <NuxtRouteAnnouncer />
+    <!-- ハンバーガーメニュー -->
+    <HamburgerMenu />
     <!-- テーマ切り替えボタン -->
     <div class="fixed top-4 right-4 z-50">
       <ThemeToggle />
