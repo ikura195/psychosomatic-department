@@ -1,5 +1,5 @@
 <template>
-  <footer class="pb-20 lg:pb-0 md:bg-transparent" style="background-color: var(--yc-brand-glow-900); color: var(--yc-neutral-gray-0);">
+  <footer class="pb-20 lg:pb-0" style="background-color: var(--yc-brand-glow-300); color: var(--yc-neutral-gray-900);">
     <div class="container-custom py-16">
       <!-- デスクトップ版フッター -->
       <div class="hidden md:block">
@@ -8,10 +8,10 @@
           <div class="flex flex-col">
             <div class="flex items-center mb-6">
               <img src="/android-chrome-512x512.png" alt="山内クリニック" class="w-16 h-16 mr-3" />
-              <h3 class="text-xl font-bold md:text-gray-900" style="color: var(--yc-neutral-gray-0);">{{ site.clinicName }}</h3>
+              <h3 class="text-xl font-bold" style="color: var(--yc-neutral-gray-900);">{{ site.clinicName }}</h3>
             </div>
             <div class="mt-auto">
-              <p class="text-sm md:text-gray-700" style="color: var(--yc-neutral-gray-200);">
+              <p class="text-sm" style="color: var(--yc-neutral-gray-700);">
                 © {{ new Date().getFullYear() }} {{ site.clinicName }}. All rights reserved.
               </p>
             </div>
@@ -21,17 +21,17 @@
           <div class="flex gap-32 mx-auto">
             <!-- 中央：初めての方へ -->
             <div class="flex flex-col">
-              <h4 class="text-lg font-semibold mb-6 md:text-gray-900" style="color: var(--yc-neutral-gray-0);">初めての方へ</h4>
+              <h4 class="text-lg font-semibold mb-6" style="color: var(--yc-neutral-gray-900);">初めての方へ</h4>
               <div class="space-y-3">
-                <a href="#features" class="footer-link block relative pb-1 transition-all duration-300 md:text-gray-800" style="color: var(--yc-neutral-gray-200);">
+                <a href="#features" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
                   <span class="relative">- 特徴</span>
                   <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
                 </a>
-                <a href="#first-visit" class="footer-link block relative pb-1 transition-all duration-300 md:text-gray-800" style="color: var(--yc-neutral-gray-200);">
+                <a href="#first-visit" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
                   <span class="relative">- 受診の流れ</span>
                   <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
                 </a>
-                <a href="#faq" class="footer-link block relative pb-1 transition-all duration-300 md:text-gray-800" style="color: var(--yc-neutral-gray-200);">
+                <a href="#faq" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
                   <span class="relative">- よくある質問</span>
                   <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
                 </a>
@@ -40,13 +40,13 @@
             
             <!-- 右側：クリニックについて -->
             <div class="flex flex-col">
-              <h4 class="text-lg font-semibold mb-6 md:text-gray-900" style="color: var(--yc-neutral-gray-0);">クリニックについて</h4>
+              <h4 class="text-lg font-semibold mb-6" style="color: var(--yc-neutral-gray-900);">クリニックについて</h4>
               <div class="space-y-3">
-                <a href="#notices" class="footer-link block relative pb-1 transition-all duration-300 md:text-gray-800" style="color: var(--yc-neutral-gray-200);">
+                <a href="#notices" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
                   <span class="relative">- お知らせ</span>
                   <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
                 </a>
-                <a href="#philosophy" class="footer-link block relative pb-1 transition-all duration-300 md:text-gray-800" style="color: var(--yc-neutral-gray-200);">
+                <a href="#philosophy" class="footer-link block relative pb-1 transition-all duration-300" style="color: var(--yc-neutral-gray-800);">
                   <span class="relative">- 診療方針・理念</span>
                   <span class="absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300" style="background-color: var(--yc-brand-base-600);"></span>
                 </a>
@@ -59,7 +59,7 @@
       <!-- モバイル版フッター -->
       <div class="md:hidden">
         <div class="text-center">
-          <p class="text-sm md:text-gray-700" style="color: var(--yc-neutral-gray-200);">
+          <p class="text-sm" style="color: var(--yc-neutral-gray-700);">
             © {{ new Date().getFullYear() }} {{ site.clinicName }}. All rights reserved.
           </p>
         </div>
