@@ -4,9 +4,10 @@
       @click="toggleMenu"
       class="p-3 rounded-lg shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300"
       style="background-color: var(--yc-brand-glow-900); color: var(--yc-neutral-gray-0);"
-      aria-label="メニューを開く"
+      :aria-label="isOpen ? 'メニューを閉じる' : 'メニューを開く'"
     >
-      <Menu class="w-6 h-6" />
+      <Menu v-if="!isOpen" class="w-6 h-6" />
+      <X v-else class="w-6 h-6" />
     </button>
 
     <!-- ドロップダウンメニュー -->
@@ -108,7 +109,7 @@
 </template>
 
 <script setup lang="ts">
-import { Menu } from 'lucide-vue-next'
+import { Menu, X } from 'lucide-vue-next'
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const isOpen = ref(false)
