@@ -216,6 +216,10 @@ export default <Config>{
       spacing: {
         '18': '4.5rem',
         '22': '5.5rem'
+      },
+      transitionDuration: {
+        '1500': '1500ms',
+        '2000': '2000ms'
       }
     }
   }
