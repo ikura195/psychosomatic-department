@@ -1,7 +1,7 @@
 <template>
   <button
     @click="scrollToAccess"
-    class="fixed bottom-6 right-6 z-50 rounded-2xl shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300 px-6 py-4"
+    class="fixed bottom-6 right-6 z-50 rounded-2xl shadow-lg transition-all duration-300 hover:scale-110 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-blue-300 px-6 py-4 hidden lg:flex"
     style="background-color: var(--yc-brand-base-500); color: var(--yc-neutral-gray-0);"
     aria-label="ご予約はこちら"
     data-analytics-id="floating-tel-cta"
